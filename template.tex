@@ -1,0 +1,72 @@
+\documentclass[10pt,twocolumn]{article} 
+
+% required packages for Oxy Comps style
+\usepackage{oxycomps} % the main oxycomps style file
+\usepackage{times} % use Times as the default font
+\usepackage[style=numeric,sorting=nyt]{biblatex} % format the bibliography nicely
+
+\usepackage{amsfonts} % provides many math symbols/fonts
+\usepackage{listings} % provides the lstlisting environment
+\usepackage{amssymb} % provides many math symbols/fonts
+\usepackage{graphicx} % allows insertion of grpahics
+\usepackage{hyperref} % creates links within the page and to URLs
+\usepackage{url} % formats URLs properly
+\usepackage{verbatim} % provides the comment environment
+\usepackage{xpatch} % used to patch \textcite
+
+\bibliography{references}
+\DeclareNameAlias{default}{last-first}
+
+\xpatchbibmacro{textcite}
+  {\printnames{labelname}}
+  {\printnames{labelname} (\printfield{year})}
+  {}
+  {}
+
+\pdfinfo{
+    /Title (Senior Comps Proposal)
+    /Author (Anthony Vasquez)
+}
+
+\title{Senior Comps Proposal}
+
+\author{Anthony Vasquez}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction and Problem Context}
+This project comes from an affinity for great art. Great art to me are works that are visually pleasing, and it does not have to come from the great artists. One of the types of art I like are ones that have an interesting stylization to them. For instance, what if a photo you took could be in Van Gogh's art style, as if he recreated the photo you took yourself? Neural Style Transfer (NST) is this example of art that uses the power of neural networks to bring this question into a reality. A website that accomplishes this is \href{https://creator.nightcafe.studio/}{Night Cafe}, where users can pay to have AI generated. The main feature that aligns with what I hope to accomplish with my project is the \textit{Style Transfer} feature, which users can choose any image they wish to stylize and a style image for it. Upon using it myself, it was amazing to see a picture of mine look artistically better when stylized. Although the website does not explicitly share the source code for how this feature works, it is known that this Style Transfer technique is not new. Neural Style Transfer is the research behind taking a content image and stylizing artistic features of another image, and it is usually accomplished using a Convolutional Neural Network (CNN). Essentially, this architecture of computation nodes and connections between each other work well enough to apply NST for small image sizes. But it begs the question if this kind of neural network is the only way of accomplishing NST. My project aims to see if using a Recurrent Neural Network can be another option, which its special feature of \textbf{recurrence} on the computation nodes can help in achieving NST the same way a CNN can. I look to try another approach in accomplish NST by seeing if a RNN is just as doable, which I can then create my own stylized works just like with the website mentioned above.
+
+\section{Technical Background}
+
+\subsection{Neural Style Transfer}
+Neural Style Transfer (NST) is defined as combining a content image and style image, such that the resulting image reasonably resembles the content image, but is stylized from the style image. \cite{li2018literature} The NST for this focus is the Artistic type, where the style image is that of a painting or abstract art as the style to apply. The goal for Artistic NST is to replicate the style of an artist's work (e.g painting style) onto the content image - as if the artist recreated the content image in their art style. NST uses neural networks, which the input is the pair including the content image and style image, to output the stylized content image from the workings of hidden layers in their architecture.\cite{youtube}
+
+\subsection{Convolution Neural Network}
+Common techniques for Neural Style transfer involve using Convolutional Neural Networks (CNN). A CNN is a specific type of neural network that is inspired by the neuron interactions of a human brain. There are a few layers that compose a CNN at the architectural level, which each layer is composed of "neurons". Neurons are special nodes that perform specific calculations and this depends on the goal of using a CNN. The first layer is the input layer, which is any compatible input for the computer to read and analyze (e.g a vector array of pixels for an image). The convolutional layers comprise of the neurons that calculate the weight values of the given input (e.g detect a pixel color), which these weight values are used to classify or produce the output of a CNN's function. The pooling layer compresses the input's features (e.g colors in a picture) size to make computation faster. This can be thought of as scaling down the input such that the important features the CNN looks to use are not lost. The fully connected layers are the last set of neurons that calculate the probabilities as the output for a CNN to use for a given task (e.g probability of an image being a certain number). At a technical level, these layers make up a basic CNN and each CNN can be fine tuned on the parameters it takes, the calculations the neurons perform, and the expected output.\cite{o2015introduction}
+
+\subsection{Recurrent Neural Network}
+A Recurrent Neural Network (RNN) is a kind of neural network that specializes in processing sequential data. A normal neural network computes a result at each layer, starting with the input values, and passes the computation results onto the next layer. However, a RNN takes the computed result at the layer and passes it back in as an input at the same layer along with passing it along to the preceding layers.
+
+\section{Prior Work}
+
+\subsection{Convolutional Neural Networks for Neural Style Transfer}
+
+\subsection{Generative Music using Recurrent Neural Networks}
+
+\subsection{Video Style Transfer with Recurrent Neural Networks}
+
+\section{Methods}
+
+\section{Evaluation Metrics}
+I propose to use a qualitative metric to measure the "reasonable artistry" of using my NST method. The reasoning for the qualitative approach is because my purpose behind project is to test if using a RNN can apply stylizations on a picture that is comparable to current methods of NST, such as with CNNs. As such, 
+
+\section{Ethical Considerations}
+
+\section{Timeline}
+I am so sorry professor
+\printbibliography 
+
+\end{document}

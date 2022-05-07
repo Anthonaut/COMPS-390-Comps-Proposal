@@ -1,0 +1,13 @@
+\BOOKMARK [1][-]{section.1}{Introduction and Problem Context}{}% 1
+\BOOKMARK [1][-]{section.2}{Technical Background}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Neural Style Transfer}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Convolution Neural Network}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Recurrent Neural Network}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Prior Work}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Convolutional Neural Networks for Neural Style Transfer}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Generative Music using Recurrent Neural Networks}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{Video Style Transfer with Recurrent Neural Networks}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Methods}{}% 10
+\BOOKMARK [1][-]{section.5}{Evaluation Metrics}{}% 11
+\BOOKMARK [1][-]{section.6}{Ethical Considerations}{}% 12
+\BOOKMARK [1][-]{section.7}{Timeline}{}% 13
